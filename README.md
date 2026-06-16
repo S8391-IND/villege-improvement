@@ -181,17 +181,4 @@ All API routes are under `/api` and require a session cookie (except auth endpoi
 | PATCH | `/api/contact-requests/:id/respond` | ✓ | Approve/reject |
 | GET | `/api/dashboard/summary` | ✓ | Dashboard stats |
 
----
 
-## Removing Replit Dependencies
-
-This project was migrated from Replit. All Replit-specific code has been removed:
-
-- ❌ `@replit/vite-plugin-cartographer`
-- ❌ `@replit/vite-plugin-dev-banner`
-- ❌ `@replit/vite-plugin-runtime-error-modal`
-- ❌ `REPL_ID` environment variable checks
-- ❌ `REPLIT_DOMAINS` CORS logic
-- ❌ Required `BASE_PATH` and hard-required `PORT` env vars
-
-Replaced with standard Vite config, configurable CORS via `ALLOWED_ORIGINS`, and sensible defaults.
