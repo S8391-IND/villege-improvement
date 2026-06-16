@@ -149,36 +149,4 @@ village-connect/
 └── package.json            # npm workspaces root
 ```
 
----
-
-## API Overview
-
-All API routes are under `/api` and require a session cookie (except auth endpoints).
-
-| Method | Path | Auth | Description |
-|--------|------|------|-------------|
-| POST | `/api/auth/register` | — | Register |
-| POST | `/api/auth/login` | — | Login |
-| POST | `/api/auth/logout` | ✓ | Logout |
-| GET | `/api/auth/me` | ✓ | Current user |
-| GET | `/api/users` | ✓ | List residents |
-| GET | `/api/users/:id` | ✓ | Resident profile |
-| PATCH | `/api/users/:id/profile` | ✓ | Update profile |
-| GET | `/api/announcements` | ✓ | List announcements |
-| POST | `/api/announcements` | Admin | Create announcement |
-| DELETE | `/api/announcements/:id` | Admin | Delete |
-| GET | `/api/meetings` | ✓ | List meetings |
-| POST | `/api/meetings` | Admin | Schedule meeting |
-| DELETE | `/api/meetings/:id` | Admin | Delete |
-| GET | `/api/marketplace` | ✓ | List listings |
-| POST | `/api/marketplace` | ✓ | Create listing |
-| DELETE | `/api/marketplace/:id` | Owner/Admin | Delete |
-| GET | `/api/notifications` | ✓ | List notifications |
-| PATCH | `/api/notifications/read-all` | ✓ | Mark all read |
-| PATCH | `/api/notifications/:id/read` | ✓ | Mark one read |
-| GET | `/api/contact-requests` | ✓ | List requests |
-| POST | `/api/contact-requests` | ✓ | Send request |
-| PATCH | `/api/contact-requests/:id/respond` | ✓ | Approve/reject |
-| GET | `/api/dashboard/summary` | ✓ | Dashboard stats |
-
 
